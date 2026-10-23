@@ -1,0 +1,47 @@
+server:
+  port: 8080 # 后端端口
+  servlet:
+    context-path: / # 移除/api前缀，方便前端相对路径调用
+
+spring:
+  # 数据库配置
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/campus_agent?useUnicode=true&characterEncoding=utf8&serverTimezone=Asia/Shanghai&useSSL=false
+    username: root # 替换为你的MySQL用户名
+    password: YOUR_MYSQL_PASSWORD # 请填写你自己的MySQL密码（原值已移除）
+  # 定时任务配置
+  task:
+    scheduling:
+      pool:
+        size: 10
+  # 静态资源配置（默认，可省略）
+  web:
+    resources:
+      static-locations: classpath:/static/
+  # Jackson日期格式配置
+  jackson:
+    date-format: yyyy-MM-dd
+    time-zone: Asia/Shanghai
+
+# MyBatis-Plus配置
+mybatis-plus:
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.campus.agent.entity
+
+# 通义千问大模型配置（阿里云DashScope）
+qwen:
+  api-key: YOUR_DASHSCOPE_API_KEY # 请填写你自己的阿里云DashScope API Key（原密钥已移除）
+  model: qwen3.6-plus         # 文本对话模型
+  vl-model: qwen-vl-plus-latest      # 多模态图片理解模型（支持用户上传图片）
+
+# 高德地图天气API配置（推荐国内使用）
+# 申请地址：https://lbs.amap.com/
+# 注册后在控制台创建应用，获取Web服务API Key（免费）
+weather:
+  api-key: YOUR_AMAP_WEB_API_KEY # 请填写你自己的高德Web服务API Key（原密钥已移除）
+  city: 广州增城                   # 城市名，如：成都、北京、上海、广州
+
