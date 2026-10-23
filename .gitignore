@@ -1,0 +1,57 @@
+# IDE
+.idea/
+*.iml
+.vscode/
+
+# Git
+.DS_Store
+Thumbs.db
+
+# Build outputs
+target/
+dist/
+build/
+
+# Logs
+*.log
+logs/
+
+# Temporary files
+*.tmp
+*.temp
+*.swp
+*~
+
+# Environment
+.env
+.env.local
+.env.*.local
+
+# Dependencies
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Package manager lock files
+package-lock.json
+yarn.lock
+pnpm-lock.yaml
+
+# IDE workspace files
+*.sublime-*
+.idea/workspace.xml
+.idea/tasks.xml
+
+# AI 工作数据（含对话与记忆记录，绝不提交）
+.workbuddy/
+
+# 参赛报告生成工具（非项目代码）
+/generate_report.js
+/package.json
+/package-lock.json
+/test-add.ps1
+
+# 本地备份
+.git_backup_*/
+build_output.txt
