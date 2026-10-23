@@ -1,0 +1,44 @@
+
+> campus-agent-vue@0.1.0 build
+> vue-cli-service build
+
+
+-  Building for production...
+ WARNING  Compiled with 3 warnings20:37:39
+
+ warning  
+
+asset size limit: The following asset(s) exceed the recommended size limit (244 KiB).
+This can impact web performance.
+Assets: 
+  js/chunk-vendors.bd4a25e1.js (276 KiB)
+
+ warning  
+
+entrypoint size limit: The following entrypoint(s) combined asset size exceeds the recommended limit (244 KiB). This can impact web performance.
+Entrypoints:
+  app (637 KiB)
+      css/chunk-vendors.5c15f1f1.css
+      js/chunk-vendors.bd4a25e1.js
+      css/app.e84f8ef1.css
+      js/app.b538aeb3.js
+
+
+ warning  
+
+webpack performance recommendations: 
+You can limit the size of your bundles by using import() or require.ensure to lazy load some parts of your application.
+For more info visit https://webpack.js.org/guides/code-splitting/
+
+  File                                   Size              Gzipped
+
+  dist\js\chunk-vendors.bd4a25e1.js      276.33 KiB        92.05 KiB
+  dist\js\app.b538aeb3.js                78.87 KiB         18.57 KiB
+  dist\css\chunk-vendors.5c15f1f1.css    224.79 KiB        29.99 KiB
+  dist\css\app.e84f8ef1.css              57.37 KiB         8.34 KiB
+
+  Images and other types of assets omitted.
+
+ DONE  Build complete. The dist directory is ready to be deployed.
+ INFO  Check out deployment instructions at https://cli.vuejs.org/guide/deployment.html
+      
